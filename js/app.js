@@ -37,7 +37,7 @@ $(document).ready(function () {
              }
          });
     });
-        $("form").on("submit", function () {
+        $(".main.content").on("submit","form",function () {
         //Validación artista
         var artista = $.trim($("#artista").val());
         if (artista == "") {
@@ -57,6 +57,7 @@ $(document).ready(function () {
             alert("La url del archivo no es valido");
             return false;
         }
+        //Guardamos datos con ajax:
         $.ajax({
             url: "/api/musica/",
             data: JSON.stringify({
@@ -68,6 +69,7 @@ $(document).ready(function () {
             method: 'post',
             success: function () { //Cuando devuelve un código 2XX
                 alert("Guardado con éxito");
+                $("form").remove();
                 cargarCancion();
             },
             error: function () { //Cuando se devuelve un código 4XX ó 5XX
@@ -75,5 +77,11 @@ $(document).ready(function () {
             }
         });
         return false;
+    });
+    $(".icon").on("click",function(){
+        console.log("click en icon");
+        var html = "<form novalidate> <input type= 'text' id= 'artista' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' placeholder='URL' name='titulo' required> <button type='submit'>Guardar</button></form>";
+        $(".main.content").html(html);
+        
     });
 });
