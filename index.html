@@ -15,22 +15,22 @@
                     <div class="header logo">Música Babel</div>
                 </div>
                 <div class="col-2">
-                    <div class="header icon">X</div>
+                    <div class="header icon">+</div>
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <form novalidate>
-            <input type="text" id="artista" placeholder="Artista" name ="artista" required>
-            <input type="text" id="titulo" placeholder="Título" name="titulo" required>
-            <input type="text" id="url" placeholder="URL" name="titulo" required>
-            <button type="submit">Guardar</button>
-        </form>
-        <hr>
-        
+    <main class="main">
+        <div class="main content">
+            <form novalidate>
+                <input type="text" id="artista" placeholder="Artista" name="artista" required>
+                <input type="text" id="titulo" placeholder="Título" name="titulo" required>
+                <input type="text" id="url" placeholder="URL" name="titulo" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
         <button id="cargarMusicaButton">Recargar musica</button>
-          <ul id="musicaList">
+        <ul id="musicaList">
             <li>No hay musica para mostrar</li>
         </ul>
     </main>
@@ -52,4 +52,5 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
