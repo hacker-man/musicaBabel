@@ -6,3 +6,6 @@ bower_components/
 
 #server python
 server.py
+
+#style.css
+style.css
