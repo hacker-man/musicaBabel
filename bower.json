@@ -1,0 +1,21 @@
+{
+  "name": "musicababel",
+  "description": "Proyecyo personal, resproductor música.",
+  "main": "index.js",
+  "authors": [
+    "Jesus y Lautaro"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hacker-man/musicaBabel",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
