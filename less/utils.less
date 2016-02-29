@@ -1,0 +1,32 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.horizontal-list(){
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li { 
+      display: inline-block;
+    }
+}
+
+.img-responsive(){
+  position:relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.icon{
+  transition: background 250ms;
+  &:hover{
+    background:darken(grey, 10%);
+  }
+}
