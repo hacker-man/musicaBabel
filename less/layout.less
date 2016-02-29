@@ -1,11 +1,7 @@
 // Layout container
 .container{
     width: 100%;
-    // width: @desktop-width;
     margin: auto;
-    // .if-is-mobile({
-        // width: 100%;
-    // });
 }
 
 // Grid
@@ -14,15 +10,13 @@
         width: @i * (100% / @columns); 
         float: left;
         display: block;
-            // .if-is-mobile({
-        // width: 100%;
-    // });
     }
     .grid-generator(@columns, (@i + 1));
 }
 
 //columnas
 .row{
-    //.clearfix();
+    .clearfix();
     .grid-generator(12);
+    //div[class*="col-"]:nth-child(odd) { background-color: #999999}
 }
