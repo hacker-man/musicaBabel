@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Musica Babel</title>
+    <!-- <link rel="stylesheet" href="style.css">-->
 </head>
+
 <body>
     <header>
-        
-        
+
+
     </header>
 
     <main>
-
+        <form novalidate>
+            <input type="text" id="artista" placeholder="Artista" name ="artista" required>
+            <input type="text" id="titulo" placeholder="Título" name="titulo" required>
+            <input type="text" id="url" placeholder="URL" name="titulo" required>
+            <button type="submit">Guardar</button>
+        </form>
+        <hr>
+        
+        <button id="cargarMusicaButton">Recargar musica</button>
+          <ul id="musicaList">
+            <li>No hay musica para mostrar</li>
+        </ul>
 
     </main>
 
     <footer>
-        
+
 
     </footer>
-    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
