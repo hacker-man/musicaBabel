@@ -4,13 +4,15 @@ function cargarCancion() {
         url: "/api/musica/",
         success: function(data) {
             console.log("musica recuperada", data)
-            var html = "<li>No hay canciones disponibles</li>";
+            var html ="";
+            if (data.length==0)
+            html = "<li>No hay canciones disponibles</li>";
             for (var i in data) {
                 var id = data[i].id;
                 var artista = data[i].artista;
                 var title = data[i].title;
                 var url = data[i].url;
-                html = "<li>";
+                html += "<li>";
                 html += artista + " ";
                 html += title + " ";
                 if (url != "")

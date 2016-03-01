@@ -45,9 +45,6 @@ $(document).ready(function() {
         });
         return false;
     });
-    /*Si se pulsa el boton salir, desaparece el formulario.
-    $(".main.content").on("click", "#salir", function() {
-        $("form").remove();
-    });*/
+    //Si se pulsa el boton salir, desaparece el formulario.
     cargarCancion();
 });
