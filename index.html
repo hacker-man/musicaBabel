@@ -15,7 +15,7 @@
                     <div class="header logo">Música Babel</div>
                 </div>
                 <div class="col-2">
-                    <div class="header icon">+</div>
+                    <div class="header icon añadir">+</div>
                 </div>
             </div>
         </div>
@@ -23,21 +23,29 @@
     <main class="main">
         <div class="main content">
         </div>
-<!--        <button id="cargarMusicaButton">Recargar musica</button>-->
+        <!--        <button id="cargarMusicaButton">Recargar musica</button>-->
         <ul id="musicaList">
         </ul>
     </main>
     <footer class="footer bar">
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <audio class="footer audio" id="audio" data-id="1">
+                        <source src="canciones/1.mp3" type="audio/mpeg"> 
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-3">
-                    <div class="footer icon back">Atras</div>
+                    <div class="footer icon back" id="atras">Atras</div>
                 </div>
                 <div class="col-6">
-                    <div class="footer icon play">PLAY</div>
+                    <div class="footer icon play" id="play" data-estado="play">PLAY</div>
                 </div>
                 <div class="col-3">
-                    <div class="footer icon next">Adelante</div>
+                    <div class="footer icon next" id="adelante">Adelante</div>
                 </div>
             </div>
         </div>
@@ -45,9 +53,10 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/cargaCanciones.js"></script>
     <script src="js/validacionform.js"></script>
-	<script src="js/eliminaCancion.js"></script>
-	<script src="js/agregaCancion.js"></script>
+    <script src="js/eliminaCancion.js"></script>
+    <script src="js/agregaCancion.js"></script>
     <script src="js/editarCancion.js"></script>
+    <script src="js/controlesCancion.js"></script>
 </body>
 
 </html>

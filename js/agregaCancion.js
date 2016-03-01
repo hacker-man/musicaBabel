@@ -1,7 +1,7 @@
 $(document).ready(function() {
     //Cuando se pulse el icono "+" de la página index.html
     //mostrara nuestro formulario para agregar una canción.
-    $(".icon").on("click", function() {
+    $(".añadir").on("click", function() {
         console.log("click en icon");
         var self = this;
         var html = "";
