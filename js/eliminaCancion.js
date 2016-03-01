@@ -11,6 +11,7 @@ $(document).ready(function(){
 			method: "delete",
 			success: function () {
 				$(self).parent().remove();
+				cargarCancion();
 			}
 		});
 	});
