@@ -77,10 +77,10 @@ $(document).ready(function() {
         });
         return false;
     });
-    //Si se pulsa el boton salir, desaparece el formulario.
+    /*Si se pulsa el boton salir, desaparece el formulario.
     $(".main.content").on("click", "#salir", function() {
         $("form").remove();
-    });
+    });*/
     cargarCancion();
 
 });
