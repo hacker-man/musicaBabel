@@ -1,7 +1,11 @@
   $(document).ready(function () {
-      //Cuando se haga click en el boton eliminar de la información
-      //de la canción incrustada en nuestro código html se desincrustara
-      //y se eliminara del servidor.
+      /*Cuando se pulse en el boton editar de los datos de una canción
+	  se desplagara un formulario en linea justo debajo que nos permitira
+	  editar los campos de la misma. A su vez este formulario cuenta con un
+	  boton Cancelar -> Cierra el formulario y Guardar -> valida y envía el 
+	  formulario.Toda esa funcionalidad esta implementada en este fichero.
+	  */
+	  
       $("#musicaList").on("click", "#buttonEditar", function () {
           var self = this;
           $(self).attr("disabled", true);
