@@ -17,8 +17,9 @@ $(document).ready(function() {
         }
         //Validación de la url
         var url = $.trim($("#url").val());
-        var pattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ig;
-        if (url == "" || false == pattern.test(url)) {
+        //var pattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ig;
+        if (url == "" ){
+            //|| false == pattern.test(url)) {
             alert("La url del archivo no es valido");
             return false;
         }
