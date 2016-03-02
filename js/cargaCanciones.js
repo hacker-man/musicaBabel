@@ -6,7 +6,19 @@ function cargarCancion() {
             console.log("musica recuperada", data)
             var html ="";
             if (data.length==0)
-            html = "<li class ='listaNoData'>No hay canciones disponibles</li>";
+                html = "<li class ='listaNoData'>No hay canciones disponibles</li>";
+            else{
+                html += "<li>"
+                html +="<div class = 'row'>"; //abre row
+                html += "<div class = 'col-3'>";
+                html +="<h2>Artista</h2></div>"
+                html += "<div class = 'col-3'>";
+                html +="<h2>Título</h2></div>";
+                html += "<div class = 'col-3'>";
+                html +="<h2>URL</h2></div>";
+                html +="</div>" //cierra row
+            }
+                
             for (var i in data) {
                 var id = data[i].id;
                 var artista = data[i].artista;
