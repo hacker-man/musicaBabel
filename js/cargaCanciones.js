@@ -28,17 +28,22 @@ function cargarCancion() {
                 html += "<li>";
                 html +="<div class = 'row'>"; //abre row
                 html += "<div class = 'col-3'>";
+				html +="<div class ='songArtist'>";
                 html += artista + "</div>";
+				html += "</div>"
                 html += "<div class = 'col-3'>";
+				html +="<div class ='songTitle'>";
                 html += title + "</div>";
+				html += "</div>";
                 html += "<div class = 'col-3'>";
-                html += url +"</div>";
+				html += "<div class = 'songUrl'>";
+                html += url +"</div></div>";
                 html += "<div class = 'col-1'>";
-                html += '<button class="Button Reproducir" id="buttonReproducir" data-musicaid =" ' + id + '">Reproducir</button></div>';
+                html += '<button class="Button Reproducir" id="buttonReproducir" data-musicaid =" ' + id + '"><i class="fa fa-play"></i></button></div>';
                 html += "<div class = 'col-1'>";
-                html += '<button class="Button Editar" id="buttonEditar" data-musicaid ="' + id + '">Editar</button></div>';
+                html += '<button class="Button Editar" id="buttonEditar" data-musicaid ="' + id + '"><i class="fa fa-pencil-square-o"></i></button></div>';
                 html += "<div class = 'col-1'>";
-                html += '<button class="Button Eliminar" id="buttonEliminar" data-musicaid ="' + id + '">Eliminar</button</div>';
+                html += '<button class="Button Eliminar" id="buttonEliminar" data-musicaid ="' + id + '"><i class="fa fa-trash-o"></i></button</div>';
                 html += "</div>"; //cierra row
                 html += "</li>";
             }
