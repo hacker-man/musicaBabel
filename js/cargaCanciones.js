@@ -6,16 +6,17 @@ function cargarCancion() {
             console.log("musica recuperada", data)
             var html ="";
             if (data.length==0)
-                html = "<li class ='listaNoData'>No hay canciones disponibles</li>";
+                html = "<li class ='listaNoData'>No hay canciones disponibles <i class='fa fa-music'></i></li>";
+				
             else{
-                html += "<li>"
+                html += "<li class = 'listaEncabezado'>"
                 html +="<div class = 'row'>"; //abre row
                 html += "<div class = 'col-3'>";
-                html +="<h2>Artista</h2></div>"
+                html +="<h2 class= 'listaEncabezado title'>Artista</h2></div>"
                 html += "<div class = 'col-3'>";
-                html +="<h2>Título</h2></div>";
+                html +="<h2 class = 'listaEncabezado title'>Título</h2></div>";
                 html += "<div class = 'col-3'>";
-                html +="<h2>URL</h2></div>";
+                html +="<h2 class = 'listaEncabezado title'>URL</h2></div>";
                 html +="</div>" //cierra row
             }
                 
@@ -31,7 +32,7 @@ function cargarCancion() {
                 html += "<div class = 'col-3'>";
                 html += title + "</div>";
                 html += "<div class = 'col-3'>";
-                html += "(" + url + ")"+"</div>";
+                html += url +"</div>";
                 html += "<div class = 'col-1'>";
                 html += '<button class="Button Reproducir" id="buttonReproducir" data-musicaid =" ' + id + '">Reproducir</button></div>';
                 html += "<div class = 'col-1'>";
