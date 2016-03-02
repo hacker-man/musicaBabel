@@ -8,7 +8,7 @@ $(document).ready(function() {
         var icono = $(this).html();
         if (icono == "+") {
             $(this).html("x");
-            html = "<form novalidate> <input type= 'text' id= 'artista' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' placeholder='URL' name='titulo' required> <button type='submit'>Guardar</button></form>";
+            html = "<form novalidate> <input type= 'text' class = 'artistaClase' id= 'artista' placeholder= 'Artista' name='artista' required> <input type= 'text' class = 'tituloClase' id=titulo placeholder= 'Titulo' name='titulo' required> <input type='text' class = 'urlClase' id='url' placeholder='URL' name='titulo' required> <button type='submit'>Guardar</button></form>";
             $(".main.content").html(html);
             $("#musicaList li").remove();
             $("form").on("submit",function(){
