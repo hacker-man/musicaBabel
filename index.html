@@ -29,7 +29,6 @@
     <main class="main">
         <div class="main content">
         </div>
-
         <ul id="musicaList">
         </ul>
     </main>
@@ -37,10 +36,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <audio class="footer audio" id="audio" data-id="1">
-                        <source src="" type="audio/mpeg"> 
-                        Your browser does not support the audio tag.
-                    </audio>
+                    <div class="foooter datos-cancion">
+                        <audio class="footer audio" id="audio" data-id="0">
+                            <source src="" type="audio/mpeg"> Your browser does not support the audio tag.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="datos-tiempo-restante">0:00</div>
+                </div>
+                <div class="col-6">
+                    <div class="datos-artista">-</div>
+                </div>
+                <div class="col-2">
+                    <div class="datos-tiempo-total">0:00</div>
+                </div>
+                <div class="col-2">
+                    <div class="icon botonMute">))</div>
                 </div>
             </div>
             <div class="row">
@@ -62,6 +76,11 @@
     <script src="js/eliminaCancion.js"></script>
     <script src="js/agregaCancion.js"></script>
     <script src="js/editarCancion.js"></script>
+    <script src="js/eventosAudio.js"></script>
+    <script src="js/reproducirCancionSelecionada.js"></script>
+    <script src="js/reproducirCancion.js"></script>
+    <script src="js/anteriorCancion.js"></script>
+    <script src="js/siguienteCancion.js"></script>
     <script src="js/controlesCancion.js"></script>
 </body>
 

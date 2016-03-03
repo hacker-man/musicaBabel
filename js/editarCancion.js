@@ -36,7 +36,8 @@
               //Validación de la url
               var url = $.trim($(".urlClase").val());
               var pattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ig;
-              if (url == "" || false == pattern.test(url)) {
+              if (url == "" ){
+                //|| false == pattern.test(url)) {
                   alert("La url del archivo no es valido");
                   return false;
               }
