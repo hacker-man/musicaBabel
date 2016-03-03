@@ -38,12 +38,12 @@ $(document).ready(function() {
         if (audio.muted == true){
             console.log("Esta muteado");
             audio.muted = false;
-            $(this).html("))");
+            $(this).html("<i class='fa fa-volume-off'></i>");
         }
         else {
             console.log("No esta muteado");
             audio.muted = true;
-            $(this).html(")X");
+            $(this).html("<i class='fa fa-microphone-slash'></i>");
         }
      });
 
