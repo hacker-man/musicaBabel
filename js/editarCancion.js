@@ -5,21 +5,23 @@
 	  boton Cancelar -> Cierra el formulario y Guardar -> valida y envía el 
 	  formulario.Toda esa funcionalidad esta implementada en este fichero.
 	  */
-	  
-      $("#musicaList").on("click", "#buttonEditar", function () {
-          var self = this;
+
+      $("#musicaList").on("click", ".Button.Editar", function () {
+          var self = this;//Se refiere al button
+          var grandpa = $(this).parent().parent();
           $(self).attr("disabled", true);
           console.log("Editar canción");
           var id = $(this).data("musicaid");
-          var self = this; //Se refiere al button
-          $(self).parent().append("<form novalidate> <input type= 'text' id= 'artista' class = 'artistaClase' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo class = 'tituloClase' placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' class = 'urlClase' placeholder='URL' name='titulo' required> <button type='submit'>Guardar</button><button type = 'button' id = 'cancelar'>cancelar</button></form>");
+          
+         $(grandpa).append("<div class = 'row'><div class = 'col-12'><form novalidate> <input type= 'text' id= 'artista' class = 'artistaClase' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo class = 'tituloClase' placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' class = 'urlClase' placeholder='URL' name='titulo' required> <button type='submit' class ='save'><i class='fa fa-floppy-o'></i></button><button type = 'button' class = 'cancelar'><i class='fa fa-ban'></i></button></form></div></div>");
 
-          $("#musicaList").on("click", "#cancelar", function () {
-              $(self).attr("disabled",false);
-              $("form").remove();
+          $(grandpa).find(".cancelar").on("click",function () {
+              $(self).attr("disabled", false);
+              $(grandpa).find("form").remove();
           });
-
-          $("li form").on("submit", function () {
+          //Para la edición de los formularios en linea:
+           $(".artistaClase").focus();
+          $(grandpa).find("form").on("submit", function () {
               var artista = $.trim($(".artistaClase").val());
               if (artista == "") {
                   alert("El artista no puede ser vacío");

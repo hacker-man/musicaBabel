@@ -4,18 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Musica Babel</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <header class="header bar">
         <div class="container">
             <div class="row">
-                <div class="col-10">
-                    <div class="header logo">Música Babel</div>
+               <div class="col-2">
+               		<div class="logoBabel">
+               			<img src="img/logo/logo-movil.png" alt="logo empresa babel">
+               		</div>
+               </div>
+                <div class="col-9">
+                    <div class="header logo"><h1>Música Babel</h1></div>
                 </div>
-                <div class="col-2">
-                    <div class="header icon añadir">+</div>
+                <div class="col-1">
+                    <div class="header icon add" data-iconoid="+"><i class="fa fa-plus-circle"></i></div>
                 </div>
             </div>
         </div>
@@ -32,25 +38,25 @@
             <div class="row">
                 <div class="col-12">
                     <audio class="footer audio" id="audio" data-id="1">
-                        <source src="canciones/1.mp3" type="audio/mpeg"> 
+                        <source src="" type="audio/mpeg"> 
                         Your browser does not support the audio tag.
                     </audio>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <div class="footer icon back" id="atras">Atras</div>
+                    <div class="footer icon back" id="atras"><i class="fa fa-fast-backward"></i></div>
                 </div>
                 <div class="col-6">
-                    <div class="footer icon play" id="play" data-estado="play">PLAY</div>
+                    <div class="footer icon play" id="play" data-estado="play"><i class="fa fa-play-circle"></i></div>
                 </div>
                 <div class="col-3">
-                    <div class="footer icon next" id="adelante">Adelante</div>
+                    <div class="footer icon next" id="adelante"><i class="fa fa-fast-forward"></i></div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/cargaCanciones.js"></script>
     <script src="js/validacionform.js"></script>
     <script src="js/eliminaCancion.js"></script>

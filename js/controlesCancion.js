@@ -1,20 +1,18 @@
  $(document).ready(function() {
-     //Cuando se haga click en el boton eliminar de la información
-     //de la canción incrustada en nuestro código html se desincrustara
-     //y se eliminara del servidor.
+   	 
      $("#play").on("click", function() {
          var estado = $(this).data("estado");
          console.log("Play/Pause canción", estado);
          if (estado == "play") {
              console.log("Play canción");
              $(this).data("estado", "pause");
-             $(this).html("PAUSE");
+             $(this).html("<i class='fa fa-pause-circle-o'></i>");
              $("#audio").trigger('play');
              //$(this).remove();
          } else {
              console.log("Pause canción");
              $(this).data("estado", "play");
-             $(this).html("PLAY");
+             $(this).html("<i class='fa fa-play-circle'></i>");
              $("#audio").trigger('pause');
          }
          //Se refiere al button
