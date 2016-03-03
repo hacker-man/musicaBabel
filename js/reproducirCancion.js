@@ -1,3 +1,4 @@
+//Reproducir la canción que te pasan
 function reproducir(id, url) {
     $("#audio").data("id", id);
     $("#audio source").attr("src", url);

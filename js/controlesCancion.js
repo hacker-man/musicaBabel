@@ -33,31 +33,13 @@
          }
      });
 
-
+    //Control de siguiente cancion
      $("#adelante").on("click", function() {
          siguienteCancion();
      });
 
-
+     //Control de anterior cancion
      $("#atras").on("click", function() {
          anteriorCancion();
      });
- });
-
- $("#buttonReproducir").on("click", function() {
-     var id = $(this).data("musicaid");
-     var url = "";
-     $.ajax({ //Petición de los datos
-         url: "/api/musica/",
-         success: function(data) {
-             console.log("Data", data);
-             //Obtenemos en que posicion del array data esta la cancion que se esta reproduciendo
-             for (var i = 0; i < data.length; i++) {
-                 if (data[i].id == id) {
-                     url = data[i].url;
-                 }
-             }
-         }
-     });
-
  });

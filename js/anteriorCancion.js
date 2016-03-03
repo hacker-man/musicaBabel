@@ -1,3 +1,4 @@
+ //Pasar la canción a la anteior
  function anteriorCancion() {
      //Obtenemos el id de la cancion actual
      var idEnCurso = $("#audio").data("id");
