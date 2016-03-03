@@ -6,7 +6,7 @@ function cargarCancion() {
             console.log("musica recuperada", data)
             var html ="";
             if (data.length==0)
-                html = "<li class ='listaNoData'>No hay canciones disponibles <i class='fa fa-music'></i></li>";
+                html = "<li class ='listaNoData'><i class='fa fa-music'></i> No hay canciones disponibles <i class='fa fa-music'></i></li>";
 				
             else{
                 html += "<li class = 'listaEncabezado'>"
