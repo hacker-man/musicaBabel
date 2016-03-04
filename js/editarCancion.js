@@ -13,7 +13,7 @@
           console.log("Editar canción");
           var id = $(this).data("musicaid");
           
-         $(grandpa).append("<div class = 'row'><div class = 'col-12'><form novalidate> <input type= 'text' id= 'artista' class = 'artistaClase' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo class = 'tituloClase' placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' class = 'urlClase' placeholder='URL' name='titulo' required> <button type='submit' class ='save'><i class='fa fa-floppy-o'></i></button><button type = 'button' class = 'cancelar'><i class='fa fa-ban'></i></button></form></div></div>");
+         $(grandpa).append("<div class = 'row'><div class = 'col-12'><form class='formlist' novalidate> <input type= 'text' id= 'artista' class = 'artistaClase' placeholder= 'Artista' name='artista' required> <input type= 'text' id=titulo class = 'tituloClase' placeholder= 'Titulo' name='titulo' required> <input type='text' id='url' class = 'urlClase' placeholder='URL' name='titulo' required> <button type='submit' class ='save'><i class='fa fa-floppy-o'></i></button><button type = 'button' class = 'cancelar'><i class='fa fa-ban'></i></button></form></div></div>");
 
           $(grandpa).find(".cancelar").on("click",function () {
               $(self).attr("disabled", false);

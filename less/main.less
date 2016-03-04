@@ -1,65 +1,123 @@
 .main {
-    padding-top: 3%;
-    padding-bottom: 1%;
-    .formPrincipal {
-        margin: 10% 30%;
-    }
-    .artistaClase {
-        margin-right: 10px;
-    }
-    .tituloClase {
-        margin-right: 10px;
-    }
-    .urlClase {
-        margin-right: 10px;
-    }
-    .save{
-        margin-right: 10px;
-    }
+	padding-top: 3%;
+	padding-bottom: 1%;
+	.formPrincipal {
+		margin: 10% 0;
+		text-align: center;
+		.artistaClase {
+			margin-right: 32px;
+			height: 22px;
+			.if-is-mobile( {
+				height: 36px;
+				margin-bottom: 11%;
+				margin-left: auto;
+				margin-right: auto
+			}
+			);
+		}
+		.tituloClase {
+			margin-right: 32px;
+			height: 22px;
+			.if-is-mobile( {
+				height: 36px;
+				margin-bottom: 11%;
+				margin-left: auto;
+				margin-right: auto
+			}
+			);
+		}
+		.urlClase {
+			margin-right: 32px;
+			height: 22px;
+			.if-is-mobile( {
+				height: 36px;
+				margin-bottom: 11%;
+				margin-left: auto;
+				margin-right: auto
+			}
+			);
+		}
+		.save {
+			margin-right: 32px;
+			.if-is-mobile( {
+				display: block;
+				position: absolute;
+				left: 98px;
+				top: 379px;
+				width: 119px;
+				height: 40px;
+			}
+			);
+		}
+		.if-is-mobile( {
+			margin: 39% -2px;
+		}
+		);
+	}
+	.artistaClase {
+		margin-right: 10px;
+	}
+	.tituloClase {
+		margin-right: 10px;
+	}
+	.urlClase {
+		margin-right: 10px;
+	}
+	.save {
+		margin-right: 10px;
+	}
 }
 
 .content {
-    padding-top: 6%;
+	padding-top: 6%;
 }
 
 #musicaList {
-    li {
-        list-style: none;
-        margin: 10px;
-        margin-left: 4px;
-        padding: 10px;
-        border-style: ridge;
-        border-width: 2px;
-        border-color: @sea-showing;
-        background-color: rgba(207, 294, 255, 0.3);
-    }
-    .songArtist {
-        color: white;
-        font-weight: bold;
-    }
-    .songTitle {
-        color: white;
-        font-weight: bold;
-    }
-    .songUrl {
-        color: white;
-        font-weight: bold;
-    }
-    .fa.fa-music {
-        font-size: 14px;
-        color: white;
-    }
-    .listaEncabezado {
-        border: none;
-        background: none;
-    }
-    .listaEncabezado.title {
-        font-family: @titles-font-lista;
-        color: @sunlit-seaby;
-    }
-    .listaNoData {
-        border: none;
-        text-align: center;
-        color: white;
-    }
+	li {
+		list-style: none;
+		margin: 18px;
+		margin-left: -18px;
+		padding: 10px;
+		border-style: ridge;
+		border-width: 2px;
+		border-color: @sea-showing;
+		background-color: rgba(207, 294, 255, 0.3);
+		.formlist{
+			margin-top:2%;
+		}
+	}
+	.songArtist {
+		color: white;
+		font-weight: bold;
+	}
+	.songTitle {
+		color: white;
+		font-weight: bold;
+	}
+	.songUrl {
+		color: white;
+		font-weight: bold;
+	}
+	.fa.fa-music {
+		font-size: 14px;
+		color: white;
+	}
+	.listaEncabezado {
+		border: none;
+		background: none;
+	}
+	.listaEncabezado.title {
+		font-family: @titles-font-lista;
+		color: @sunlit-seaby;
+		.if-is-mobile( {
+			margin-top: 74%;
+		}
+		);
+	}
+	.listaNoData {
+		border: none;
+        margin: 10px 144px;
+		text-align: center;
+		color: white;
+	}
 }

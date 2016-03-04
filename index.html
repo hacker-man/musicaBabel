@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Musica Babel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/faviconbabel.png">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
+   <div id="bloqueante">
+   </div>
     <header class="header bar">
         <div class="container">
             <div class="row">
@@ -26,6 +29,7 @@
             </div>
         </div>
     </header>
+
     <main class="main">
         <div class="main content">
         </div>
@@ -54,7 +58,7 @@
                     <div class="datos-tiempo-total">0:00</div>
                 </div>
                 <div class="col-2">
-                    <div class="icon botonMute">))</div>
+                    <div class="icon botonMute"><i class="fa fa-volume-off"></i></div>
                 </div>
             </div>
             <div class="row">
@@ -70,7 +74,9 @@
             </div>
         </div>
     </footer>
+    
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/ajaxconfig.js"></script>
     <script src="js/cargaCanciones.js"></script>
     <script src="js/validacionform.js"></script>
     <script src="js/eliminaCancion.js"></script>
@@ -82,6 +88,7 @@
     <script src="js/anteriorCancion.js"></script>
     <script src="js/siguienteCancion.js"></script>
     <script src="js/controlesCancion.js"></script>
+
 </body>
 
 </html>

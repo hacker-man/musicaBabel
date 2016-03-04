@@ -15,8 +15,8 @@ function cargarCancion() {
                 html +="<h2 class= 'listaEncabezado title'>Artista</h2></div>"
                 html += "<div class = 'col-3'>";
                 html +="<h2 class = 'listaEncabezado title'>Título</h2></div>";
-                html += "<div class = 'col-3'>";
-                html +="<h2 class = 'listaEncabezado title'>URL</h2></div>";
+                //html += "<div class = 'col-3'>";
+               // html +="<h2 class = 'listaEncabezado title'>URL</h2></div>";
                 html +="</div>" //cierra row
             }
                 
@@ -35,14 +35,14 @@ function cargarCancion() {
 				html +="<div class ='songTitle'>";
                 html += title + "</div>";
 				html += "</div>";
-                html += "<div class = 'col-3'>";
-				html += "<div class = 'songUrl'>";
-                html += url +"</div></div>";
-                html += "<div class = 'col-1'>";
+              //  html += "<div class = 'col-3'>";
+				//html += "<div class = 'songUrl'>";
+                //html += url +"</div></div>";
+                html += "<div class = 'col-2'>";
                 html += '<button class="Button Reproducir" id="buttonReproducir" data-musicaid =" ' + id + '"><i class="fa fa-play"></i></button></div>';
-                html += "<div class = 'col-1'>";
+                html += "<div class = 'col-2'>";
                 html += '<button class="Button Editar" id="buttonEditar" data-musicaid ="' + id + '"><i class="fa fa-pencil-square-o"></i></button></div>';
-                html += "<div class = 'col-1'>";
+                html += "<div class = 'col-2'>";
                 html += '<button class="Button Eliminar" id="buttonEliminar" data-musicaid ="' + id + '"><i class="fa fa-trash-o"></i></button</div>';
                 html += "</div>"; //cierra row
                 html += "</li>";

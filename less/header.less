@@ -1,22 +1,28 @@
-.header.bar{
-    background:@adrift;
-    color:white;
-    position: fixed;
-    width:100%;
-    text-align: center;
-    z-index: 1;
-}
-.header.icon.add{
-	margin-top: 25%;
-	padding: 5px;
-	.fa.fa-plus-circle{
-		font-size: 40px;
-	}
-	.fa.fa-times-circle-o{
-		font-size: 40px;
-	}
+.header.bar {
+	background: @adrift;
+	color: white;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	z-index: 1;
 }
 
-.logoBabel{
+.header.icon.add {
+	margin-top: 25%;
+	padding: 5px;
+	.fa.fa-plus-circle {
+		font-size: 40px;
+	}
+	.fa.fa-times-circle-o {
+		font-size: 40px;
+	}
+	.if-is-mobile( {
+		margin-top:67%;
+		margin-left: -65%;
+	}
+	);
+}
+
+.logoBabel {
 	margin-top: 4%;
 }
