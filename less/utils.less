@@ -1,0 +1,49 @@
+.clearfix() {
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.img-responsive() {
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+
+.icon {
+	transition: background 250ms;
+	&:hover {
+		background: darken(@adrift, 5%);
+		cursor: pointer;
+	}
+}
+
+.back:active {
+	color: @sunlit-seaby;
+}
+
+.next:active {
+	color: @sunlit-seaby;
+}
+
+.activo {
+	background-color: rgba(121, 189, 154, 0.4);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: hidden;
+}
+
+.if-is-mobile(@rules) {
+    @media screen and (max-width: (@mobile-width - 1)){
+        @rules();
+    }
+}
+   .selecionada{
+    background-color: rgba(0,0,0,0.4) !important;
+}
