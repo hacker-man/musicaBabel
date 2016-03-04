@@ -29,7 +29,12 @@ $(document).ready(function() {
                 $(self).attr("disabled", true);
                 console.log("Editar canción");
 
-                $(grandpa).append("<div class = 'row'><div class = 'col-12'><form class='formlist' novalidate> <input type= 'text' id= 'artista' class = 'artistaClase' placeholder= 'Artista' name='artista' value='" + artistaOriginal + "'required> <input type= 'text' id='titulo' class = 'tituloClase' placeholder= 'Titulo' name='titulo' value='" + tituloOriginal + "'required> <input type='text' id='url' class = 'urlClase' placeholder='URL' name='url' value='" + urlOriginal + "'required> <button type='submit' class ='save'><i class='fa fa-floppy-o'></i></button><button type = 'button' class = 'cancelar'><i class='fa fa-ban'></i></button></form></div></div>");
+                $(grandpa).append("<div class = 'row'><div class = 'col-12'><form class='formlist" + id + "' novalidate>"
+                    +"<input type= 'text' id= 'artista' class = 'artistaClase" + id + "' placeholder= 'Artista' name='artista' value='" + artistaOriginal + "'required>" 
+                    +"<input type= 'text' id='titulo' class = 'tituloClase" + id + "' placeholder= 'Titulo' name='titulo' value='" + tituloOriginal + "'required> "
+                    +"<input type='text' id='url' class = 'urlClase" + id + "' placeholder='URL' name='url' value='" + urlOriginal + "'required> "
+                    +"<button type='submit' class ='save'><i class='fa fa-floppy-o'></i></button>"
+                    +"<button type = 'button' class = 'cancelar'><i class='fa fa-ban'></i></button></form></div></div>");
 
                 $(grandpa).find(".cancelar").on("click", function() {
                     $(self).attr("disabled", false);
@@ -37,20 +42,21 @@ $(document).ready(function() {
                 });
                 //Para la edición de los formularios en linea:
                 $(".artistaClase").focus();
-                $(grandpa).find("form").on("submit", function() {
-                    var artista = $.trim($(".artistaClase").val());
+
+                $(grandpa).find(".formlist" + (id.toString().trim())).on("submit", function() {
+                    var artista = $.trim($(".artistaClase" + (id.toString().trim())).val());
                     if (artista == "") {
                         alert("El artista no puede ser vacío");
                         return false;
                     }
                     //Validación del título
-                    var titulo = $.trim($(".tituloClase").val());
+                    var titulo = $.trim($(".tituloClase" + (id.toString().trim())).val());
                     if (titulo == "") {
                         alert("El título no puede ser vacío");
                         return false;
                     }
                     //Validación de la url
-                    var url = $.trim($(".urlClase").val());
+                    var url = $.trim($(".urlClase" + (id.toString().trim())).val());
                     var pattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ig;
                     if (url == "") {
                         //|| false == pattern.test(url)) {
