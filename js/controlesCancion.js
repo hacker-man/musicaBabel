@@ -2,7 +2,7 @@
  $(document).ready(function() {
      //Control del Play/Pause
      $("#play").on("click", function() {
-         var hayCancion = false;
+         // var hayCancion = false;
          var self = this;
          var estado = $(this).data("estado");
          var idEnCurso = $("#audio").data("id");
@@ -16,17 +16,15 @@
                              var id = data[0].id;
                              var url = data[0].url;
                              reproducir(id, url);
-                             hayCancion = true;
+                             // hayCancion = true;
                          }
                      }
                  });
              }
-             if (hayCancion) {
-                 console.log("Play canción");
-                 $(this).data("estado", "pause");
-                 $(this).html("<i class='fa fa-pause-circle-o'></i>");
-                 $("#audio").trigger('play');
-             }
+             console.log("Play canción");
+             $(this).data("estado", "pause");
+             $(this).html("<i class='fa fa-pause-circle-o'></i>");
+             $("#audio").trigger('play');
 
          } else {
              console.log("Pause canción");

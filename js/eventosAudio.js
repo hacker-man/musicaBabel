@@ -1,5 +1,6 @@
 
 //Pasar el calculo de tiempo de segundos a minutos y segundos
+//
 function calcularTiempo(tiempo) {
     var calculo = Math.floor(tiempo);
     var html = "";
@@ -14,6 +15,8 @@ function calcularTiempo(tiempo) {
 
     return html;
 }
+
+//Calculamos el porcentaje de tiempo transcurrido
 function calcularPorcentajeTranscurrido(tiempoTrans, tiempoTotal){
     return (tiempoTrans/tiempoTotal)*100;
 }
@@ -31,11 +34,12 @@ $(document).ready(function() {
     });
 
     //Hallar el tiempo transcurrido
-    // $("#audio").on("timeupdate", function() {
-    //     $(".datos-tiempo-restante").text(calcularTiempo(this.currentTime));
-    //     $(".barra.actual").css("height", calcularPorcentajeTranscurrido(this.currentTime));
+    $("#audio").on("timeupdate", function() {
+        // var porcentaje = this.duration+"%";
+        $(".datos-tiempo-restante").text(calcularTiempo(this.currentTime));
+        $(".barra.actual").css("width", calcularPorcentajeTranscurrido(this.currentTime, this.duration) + "%");
 
-    // });
+    });
 
     //Silenciar canción
     $(".botonMute").on("click", function(){
