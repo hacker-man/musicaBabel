@@ -25,7 +25,7 @@ function cargarCancion() {
                 var artista = data[i].artista;
                 var title = data[i].title;
                 var url = data[i].url;
-                html += "<li>";
+                html += "<li class=cancion" + id + ">";
                 html +="<div class = 'row'>"; //abre row
                 html += "<div class = 'col-3'>";
 				html +="<div class ='songArtist'>";
