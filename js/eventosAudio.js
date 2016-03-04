@@ -55,4 +55,8 @@ $(document).ready(function() {
         }
      });
 
+    // $(".barra.progreso").on("click", function(data){
+    //     console.log("Click en barra", data);
+
+    // });
 });
