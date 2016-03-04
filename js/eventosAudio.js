@@ -14,6 +14,9 @@ function calcularTiempo(tiempo) {
 
     return html;
 }
+function calcularPorcentajeTranscurrido(tiempoTrans, tiempoTotal){
+    return (tiempoTrans/tiempoTotal)*100;
+}
 
 $(document).ready(function() {
 
@@ -28,10 +31,11 @@ $(document).ready(function() {
     });
 
     //Hallar el tiempo transcurrido
-    $("#audio").on("timeupdate", function() {
-        $(".datos-tiempo-restante").text(calcularTiempo(this.currentTime));
+    // $("#audio").on("timeupdate", function() {
+    //     $(".datos-tiempo-restante").text(calcularTiempo(this.currentTime));
+    //     $(".barra.actual").css("height", calcularPorcentajeTranscurrido(this.currentTime));
 
-    });
+    // });
 
     //Silenciar canción
     $(".botonMute").on("click", function(){
